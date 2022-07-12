@@ -1,0 +1,17 @@
+/*
+ * Banner landing 2021
+ *
+ * Template part used on the landing 2021 template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.landing-banner {
+  @include iPhoneX;
+  background-color: $landingGray;
+
+  .container {
+    padding: rem(40) 0 rem(60);
+  }
+}

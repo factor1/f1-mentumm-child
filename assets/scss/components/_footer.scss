@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------------------
+  Footer
+------------------------------------------------------------------------------*/
+.site-footer {
+  @include iPhoneX;
+  background-color: $blue;
+
+  .container {
+    padding: rem(21) 0 rem(18);
+  }
+
+  .col-12 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  p {
+    margin: 0;
+    flex-grow: 3;
+    font-size: rem(14);
+    font-family: $sans;
+    color: $white;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .site-footer .container > div {
+    flex: 0 1 100%;
+  }
+}

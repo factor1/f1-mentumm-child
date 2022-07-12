@@ -1,0 +1,102 @@
+/*
+ * 3-Column Video Hero Section (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.video-hero--home {
+  position: relative;
+  @include iPhoneX;
+  overflow: hidden;
+
+  // Hero video
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .container {
+    padding: rem(180) 0;
+    z-index: 1;
+  }
+
+  .button {
+    margin-right: rem(30);
+  }
+
+  h1 {
+    margin-bottom: rem(50);
+    font: 700 rem(60)/1 $open;
+    letter-spacing: -0.00107em;
+    text-transform: lowercase;
+    color: $white;
+  }
+
+  p {
+    font-size: rem(26);
+    line-height: 1.38;
+    font-family: $sans;
+    color: $white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.35);
+  }
+}
+
+// Hide video on mobile devices
+.touch .hero__video,
+.touch .hero__video video {
+  // display: none !important;
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .video-hero--home .hero-button a.button {
+    min-width: 70%;
+    margin-bottom: rem(20);
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .video-hero--home {
+
+    .container {
+      padding: rem(150) 0 rem(30);
+    }
+
+    h1 {
+      margin-bottom: rem(30);
+      font-size: rem(36);
+    }
+
+    p {
+      font-size: rem(20);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------
+  Plugin Overrides
+----------------------------------------------------------------------------*/
+
+//Calendly widget
+.calendly-inline-widget {
+  margin: rem(-35) 0 rem(-50) !important;
+}
+
+
+//UsersWP advanced search
+
+.full-width-field {
+  max-width: unset !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-basis: 100% !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  .form-check.as-industry {
+    flex-basis: 50% !important;
+    padding: rem(5) rem(20) !important;
+    label {
+      padding: rem(5) rem(5) 0;
+    }
+  }
+}

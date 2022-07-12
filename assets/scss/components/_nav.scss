@@ -1,0 +1,351 @@
+/*------------------------------------------------------------------------------
+  Nav Menus
+------------------------------------------------------------------------------*/
+// General nav styles
+nav {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    // height: 100%;
+  }
+}
+
+// Logged-Out Menu
+.nav--primary {
+  ul {
+    align-items: center;
+  }
+
+  > ul > li + li {
+    margin-left: rem(30);
+  }
+
+  a {
+    padding: rem(15) rem(10) rem(10);
+    font: 400 rem(18)/1 $sans;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+
+  // nav buttons
+  .nav-button {
+    a {
+      padding: rem(14) rem(20) !important;
+    }
+
+    &--teal a {
+      @include button($teal, $teal, $white, transparent, $teal);
+    }
+
+    &--ghost a {
+      @include button($white, transparent, $white, $white, $scooter);
+    }
+  }
+
+  // current page
+  .current-menu-item:not(.nav-button):before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: rem(10);
+    width: 60%;
+    height: rem(5);
+    background-color: $teal;
+  }
+
+  // Submenus
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    padding: rem(10) 0;
+    top: 100%;
+    left: 0;
+    min-width: rem(215);
+    border-top-left-radius: rem(9);
+    border-bottom-right-radius: rem(9);
+    background-color: $white;
+    z-index: 99;
+
+    a {
+      padding: rem(10) rem(15);
+      font-size: rem(13);
+      color: $tundora;
+      text-transform: none;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
+
+// Logged-Out Menu - mobile
+.nav--mobile {
+  padding: rem(50) 0;
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex: 0 1 100%;
+    text-align: center;
+  }
+
+  a {
+    position: relative;
+    padding: rem(20) rem(10);
+    font: 400 rem(18)/1 $sans;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+
+  // nav buttons
+  .nav-button {
+    margin: rem(10) 0;
+
+    a {
+      width: auto;
+      padding: rem(14) rem(20) !important;
+    }
+
+    &--teal a {
+      @include button($teal, $teal, $white, transparent, $teal);
+    }
+
+    &--blue a,
+    &--ghost a {
+      @include button($blue, transparent, $blue, $blue, $white);
+    }
+  }
+
+  // current page
+  .current-menu-item:not(.nav-button) > a:before {
+    content: '';
+    position: absolute;
+    bottom: rem(10);
+    left: 0;
+    right: 0;
+    width: 30%;
+    height: rem(3);
+    margin: auto;
+    background-color: $teal;
+  }
+
+  .sub-menu {
+    padding: rem(10) 0;
+
+    a {
+      padding: rem(10) rem(15);
+      font-size: rem(16);
+      color: $tundora;
+      text-transform: none;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
+
+// Mega menu left
+.nav--left {
+  width: calc(100% + 20px);
+  margin: rem(40) rem(-10) rem(28);
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  li {
+    flex: 0 1 17%;
+    width: calc(17% - 20px);
+    min-width: rem(130);
+    margin: rem(10);
+    // background-color: rgba($lightGray, 0.12);
+  }
+
+  a {
+    padding: rem(15) rem(10) rem(10);
+    font: 400 rem(18)/1 $sans;
+    color: $blue;
+    text-decoration: none;
+
+    > div {
+      position: relative;
+      margin-bottom: rem(20);
+
+      img {
+        height: rem(60);
+        transition: all .4s ease;
+
+        &:last-of-type {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+    }
+
+    &.active,
+    &:hover {
+      color: $scooter;
+
+      > div img {
+        &:first-of-type {
+          opacity: 0;
+        }
+
+        &:last-of-type {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Mega menu right
+.nav--right {
+  padding: rem(10) 0;
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex: 0 1 100%;
+  }
+
+  a {
+    padding: rem(10);
+    font: 400 rem(18)/1 $sans;
+    color: $tundora;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+// Footer nav
+.nav--footer {
+  margin-left: rem(50);
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  a {
+    padding: rem(10);
+    font: 400 rem(14)/1.47 $sans;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+.nav--landing-footer {
+  padding: rem(20) 0;
+  ul {
+    justify-content: flex-end;
+    
+    li:last-child {
+      margin-right: 0;
+      a:after {
+        display: none;
+      }
+    }
+  }
+
+  > ul > li {
+    position: relative;
+    margin-right: rem(30);
+  }
+
+  a {
+    text-decoration: none;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: rem(2);
+      height: rem(20);
+      background-color: $white;
+      right: rem(-15);
+      top: 0;
+    }
+
+  }
+
+}
+
+// Woocommerce nav
+.woocommerce-MyAccount-navigation {
+  margin-bottom: rem(30);
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  .woocommerce-MyAccount-navigation-link {
+    flex: 0 1 100%;
+    text-transform: capitalize;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .nav--left ul {
+    justify-content: center;
+  }
+
+  .nav--footer {
+    flex: 0 1 100%;
+    margin: rem(20) 0;
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+  .nav--landing-footer ul {
+    justify-content: center;
+  }
+}

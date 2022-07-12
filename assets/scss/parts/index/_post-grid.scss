@@ -1,0 +1,44 @@
+/**
+ * Post Grid (Index)
+ *
+ * Template part used on index.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.post-grid {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0 rem(30);
+  }
+
+  .hero--post__author {
+    margin-top: rem(120);
+    margin-bottom: rem(50);
+  }
+
+  .col-12 {
+    margin-bottom: rem(20);
+  }
+
+  h3 + p {
+    margin-top: rem(-20);
+    text-transform: capitalize;
+
+    img {
+      width: rem(25);
+      margin-right: rem(5);
+    }
+  }
+
+  .col-6 {
+    margin-bottom: rem(30);
+  }
+
+  h5 {
+    margin-bottom: rem(10);
+  }
+}

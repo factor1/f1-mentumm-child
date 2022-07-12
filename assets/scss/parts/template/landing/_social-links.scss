@@ -1,0 +1,41 @@
+/*
+ * Social links
+ *
+ * Template part used on the landing 2021 template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.social-links {
+  @include iPhoneX;
+  background-color: $landingGray;
+
+  .container {
+    padding: rem(80) 0;
+  }
+
+  &__container a {
+    color: $blue-dark;
+    font-size: rem(32);
+    margin-right: rem(40);
+    &:hover {
+      color: $teal;
+    }
+    &:last-of-type {
+      margin-right: rem(0);
+    }
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .social-links__container a {
+    font-size: rem(25);
+    margin-right: rem(10);
+  }
+}
+
+
+

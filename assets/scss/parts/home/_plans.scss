@@ -1,0 +1,227 @@
+/*
+ * Plans Section (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.plans-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0 0;
+  }
+
+  .col-10 {
+    margin-bottom: rem(40);
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, span {
+      color: $white;
+    }
+  }
+
+  h2 {
+    margin-bottom: rem(40);
+    font-size: rem(60);
+    font-family: $sans;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font: 400 rem(18)/1.22 $sans;
+      text-transform: uppercase;
+    }
+  }
+
+  .button {
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+    padding: rem(20) rem(40);
+    display: inline-block !important;
+
+    span {
+      display: block;
+      margin-top: rem(5);
+      font-size: rem(14);
+      text-transform: capitalize;
+      transition: all .4s ease;
+    }
+
+    &:hover span {
+      color: $teal;
+    }
+  }
+
+  .col-4,
+  .col-6 {
+    margin-bottom: rem(20);
+  }
+
+  .plan {
+    padding: rem(40);
+    background-color: $white;
+    box-shadow: 0 0 rem(10) rgba(0, 0, 0, 1);
+
+    h3 {
+      font-size: rem(35);
+      color: $teal;
+    }
+
+    p, ol, ul {
+      margin-bottom: rem(20);
+    }
+
+    p {
+      font-size: 0.9rem;
+
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      position: relative;
+      font-size: 0.9rem;
+
+      &:before {
+	  	content: '\f00c';
+        position: absolute;
+        left: rem(-20);
+        top: rem(2);
+        font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-family: 'Font Awesome 5 Pro';
+      }
+    }
+
+    img {
+      margin: 0;
+      width: rem(40);
+      vertical-align: text-top;
+    }
+
+    span {
+      display: block;
+      margin-bottom: rem(10);
+      font: italic 300 rem(14)/1.13 $sans;
+      color: $teal;
+    }
+
+    &__price {
+      margin: 0 0 rem(10);
+      font-size: rem(30);
+      line-height: 1.17;
+      color: $blue;
+    }
+
+    small {
+      display: block;
+      margin-top: rem(10);
+      font: italic 300 rem(14)/1.13 $sans;
+      color: $doveGray;
+    }
+
+    &__monthly,
+    &__annual {
+      display: none;
+    }
+
+    &__monthly span {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .active {
+      display: block;
+    }
+  }
+
+  .feature {
+    padding: rem(10);
+    background-color: $white;
+    box-shadow: 0 0 rem(10) rgba(0, 0, 0, 1);
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(20);
+      height: rem(20);
+      margin: 0 auto rem(5);
+      border-radius: 50%;
+      background-color: #fff;
+
+      i {
+        font-size: rem(14);
+        color: $teal;
+      }
+    }
+
+    h4 {
+      font-size: rem(20);
+      color: $blue;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+	    margin-bottom: 10px;
+    }
+
+    &[data-micromodal-trigger] {
+      cursor: pointer;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .plans-section {
+    .col-6 {
+      align-self: stretch;
+	  margin-bottom: rem(15);
+	  }
+
+	.button {
+	    padding: rem(20) rem(10);
+	    }
+
+    .plan {
+      height: 100%;
+      //padding: rem(5);
+
+      h3 {
+        font-size: rem(28);
+        margin-top: 25px;
+      }
+
+      img {
+        width: rem(30);
+      }
+
+      p:emtpy {
+        display: none;
+      }
+
+      &__price {
+        font-size: rem(28);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .plans-section h2 {
+    font-size: rem(32);
+  }
+}

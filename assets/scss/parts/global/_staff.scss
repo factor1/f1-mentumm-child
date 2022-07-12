@@ -1,0 +1,40 @@
+/*
+ * Staff (Global)
+ *
+ * Template part used on the several sections of the website
+ *
+ */
+
+.staff {
+  &--container{
+    h4 {
+      font-size: rem(16);
+    }
+    p {
+      font-size: rem(14);
+    }
+  }
+
+  &--container-img {
+    display: block;
+    width: 100%;
+    height: rem(170);
+    margin-bottom: rem(30);
+  }
+}
+
+
+// Media Queries
+@media screen and (max-width: rem(991)) {
+  .staff--container-img {
+    height: rem(100);
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .staff--container-img {
+    height: rem(290);
+    max-width: rem(290);
+    margin: 0 auto rem(30);
+  }
+}

@@ -1,0 +1,30 @@
+/**
+ * Callout
+ *
+ * Template part used on the various templates/views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.2.0
+ */
+
+.callout {
+  @include iPhoneX;
+
+  &.slim .container {
+    padding: rem(25) 0 rem(10);
+  }
+
+  .container {
+    margin: 0;
+    padding: rem(90) 0;
+  }
+
+  h1, h3 {
+    text-transform: none;
+  }
+
+  &:last-of-type .container {
+    margin-bottom: 0;
+  }
+}

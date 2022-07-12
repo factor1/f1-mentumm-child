@@ -1,0 +1,113 @@
+/*
+ * Template Name: Landing Page
+ *
+ * Template used on the landing page
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.landing-section {
+  @include iPhoneX;
+
+  .container {
+    min-height: 100vh;
+    padding: rem(92) 0 rem(150);
+  }
+
+  &__logo {
+    margin-bottom: rem(85);
+
+    img {
+      width: rem(340);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li {
+    color: $white;
+  }
+
+  .button {
+    margin-top: rem(50);
+  }
+
+  // Rotating words
+  .span--outer {
+    position: relative;
+    display: inline-block;
+    width: rem(508);
+    max-width: 100%;
+    height: rem(56);
+    margin-top: rem(10);
+    vertical-align: middle;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(5);
+      border-radius: rem(9);
+      background-color: $white;
+    }
+
+    + span {
+      vertical-align: bottom;
+    }
+  }
+
+  .span--inner {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    white-space: nowrap;
+    opacity: 0;
+    color: $scooter;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+
+    &.in {
+      bottom: rem(5);
+      opacity: 1;
+    }
+
+    &.out {
+      bottom: 200%;
+      opacity: 0;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .landing-section {
+    &__logo {
+      margin-bottom: rem(50);
+
+      img {
+        width: rem(280);
+      }
+    }
+
+    .button {
+      margin-top: rem(20);
+    }
+
+    .span--outer {
+      width: rem(370);
+    }
+  }
+}
+
+@media screen and (max-width: rem(400)) {
+  .landing-section .span--inner {
+    font-size: rem(25);
+  }
+}

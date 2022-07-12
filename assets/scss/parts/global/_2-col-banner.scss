@@ -1,0 +1,34 @@
+/*
+ * 2-Column Banner (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+    
+.two-col-banner {
+  @include iPhoneX;
+
+  .container {
+    padding:  rem(80) 0;
+  }
+
+  .landing-heading,
+  .landing-medium-title,
+  .landing-big-title,
+  .landing-medium-title,
+  .landing-small-title {
+    text-shadow: rem(1) rem(2) rem(5) $black;
+    margin-bottom: rem(10);
+  }
+
+}
+
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .two-col-banner {
+    text-align: center;
+  }
+}

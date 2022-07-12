@@ -1,0 +1,43 @@
+/**
+ * Lesson CPT Archive
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+
+.lesson-content-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .col-12 {
+    margin-bottom: rem(30);
+  }
+
+  form#toggle_read {
+    div {
+      margin-bottom: rem(30);
+    }
+
+    span {
+      position: relative;
+      top: rem(-3);
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .lesson-content-section {
+    .container {
+      padding: rem(30) 0;
+    }
+
+    .col-4 {
+      margin-bottom: rem(30);
+    }
+  }
+}

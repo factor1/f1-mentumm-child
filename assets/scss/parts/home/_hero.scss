@@ -1,0 +1,37 @@
+/*
+ * Hero (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.hero--home {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(160) 0;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: rem(64);
+    color: $white;
+    text-transform: none;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .hero--home {
+    .container {
+      padding: rem(160) 0 rem(100);
+    }
+
+    h1 {
+      font-size: rem(30);
+    }
+  }
+}

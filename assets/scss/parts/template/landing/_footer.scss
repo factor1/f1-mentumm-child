@@ -1,0 +1,27 @@
+/*
+ * Footer landing 2021
+ *
+ * Template part used on the landing 2021 template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.landing-footer {
+  @include iPhoneX;
+  background-color: $blue-dark;
+
+  .container {
+    padding: 0;
+  }
+
+  p, a {
+    color: #fff;
+    font: 400 rem(16)/1.3 $lato;
+    margin-bottom: 0;
+  }
+
+  p {
+    padding: rem(20) 0;
+  }
+}

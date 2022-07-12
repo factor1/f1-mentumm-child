@@ -1,0 +1,127 @@
+/**
+ * Hero (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.blog-post {
+  @include iPhoneX;
+}
+
+.hero--post {
+  .container {
+    padding: rem(60) 0 rem(30);
+  }
+
+  h1 {
+    margin-bottom: rem(35);
+    color: $teal;
+    text-transform: none;
+
+    + .hero--post__author {
+      margin-top: rem(130);
+    }
+  }
+
+  &__img {
+    padding-bottom: 40%;
+  }
+
+  &__author {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__img {
+      flex: 0 0 auto;
+      position: relative;
+      width: rem(180);
+      height: rem(180);
+      margin-top: rem(-90);
+      margin-right: rem(20);
+      border-radius: 50%;
+      border: rem(4) solid $white;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    // img {
+    //   width: 100%;
+    //   border-radius: 50%;
+    //   border: rem(4) solid $white;
+    // }
+
+    &__info {
+      flex: 1 1 auto;
+      display: flex;
+      width: calc(70% - 20px);
+      margin-top: rem(10);
+
+      h4 {
+        color: $tundora;
+
+        a {
+          color: $blue;
+
+          &:hover {
+            color: $teal;
+          }
+
+          &:first-of-type {
+            margin-left: rem(30);
+          }
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: rem(-28);
+      right: 0;
+      width: calc(100% - 90px);
+      height: rem(28);
+      background-color: $teal;
+    }
+  }
+
+  &__icons {
+    flex: 0 0 auto;
+    margin-top: rem(10);
+    margin-left: rem(20);
+    padding-top: rem(30);
+
+    i {
+      display: block;
+      font-size: rem(18);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .hero--post {
+    h1 + .hero--post__author {
+      margin-top: rem(100);
+    }
+
+    &__author {
+      &__img {
+        width: rem(150);
+        height: rem(150);
+        margin-top: rem(-75);
+        margin-right: rem(12);
+      }
+
+      &:after {
+        width: calc(100% - 75px);
+      }
+    }
+  }
+}

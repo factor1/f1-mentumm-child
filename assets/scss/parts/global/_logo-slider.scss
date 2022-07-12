@@ -1,0 +1,38 @@
+/**
+ * Logo Slider (Global)
+ *
+ * Template part used on the various templates/views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.6.0
+ */
+
+.logo-slider {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .slick-track {
+    display: flex !important;
+    align-items: center;
+  }
+
+  &__slide {
+    padding: rem(10) rem(20);
+
+    img {
+      display: inline-block;
+      filter: grayscale(1);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .logo-slider__slide {
+    padding: rem(10) rem(50);
+  }
+}

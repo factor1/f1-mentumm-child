@@ -1,0 +1,15 @@
+/**
+ * The default page template.
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.default-content {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+}

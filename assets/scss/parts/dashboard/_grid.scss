@@ -1,0 +1,59 @@
+/*
+ * Dashboard Grid
+ *
+ * Template part used on the dashboard template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.6.0
+ */
+
+.dashboard-grid {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0 rem(40);
+  }
+
+  .col-12 {
+    margin-bottom: rem(30);
+  }
+
+  .col-4 {
+    margin-bottom: rem(25.6);
+  }
+
+  &__tile {
+    position: relative;
+    display: block;
+    height: 100%;
+    background-color: $blue;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      .dashboard-grid {
+        &__img {
+          filter: brightness(85%);
+        }
+
+        &__text {
+          color: $teal;
+        }
+      }
+    }
+  }
+
+  &__img {
+    padding-bottom: 50%;
+    transition: all .4s ease;
+  }
+
+  &__text {
+    padding: rem(12);
+    font: 400 rem(25)/1.2 $sans;
+    color: $white;
+    vertical-align: middle;
+    transition: all .4s ease;
+  }
+}

@@ -1,0 +1,126 @@
+/*
+ * Tabbed Content Section (Global)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.4.0
+ */
+
+.tabbed-content-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: rem(30);
+    margin-bottom: rem(30);
+    border-bottom: rem(4) solid $lightGray;
+  }
+
+  &__tab {
+    margin-bottom: rem(-4);
+    padding: rem(20) rem(30);
+    border: none;
+    border-bottom: rem(4) solid transparent;
+    outline: none;
+    background-color: transparent;
+    font: 700 rem(18)/1.11 $sans;
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue;
+    -webkit-appearance: none;
+    transition: all .4s ease;
+
+    img {
+      width: rem(70);
+      margin-bottom: rem(20);
+    }
+
+    span {
+      display: block;
+    }
+
+    &.active {
+      border-color: $blue;
+      pointer-events: none;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $teal;
+    }
+  }
+
+  &__content {
+    padding: rem(30) 0;
+
+    section {
+      position: relative;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding: rem(30) 0;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+  }
+
+  &__text {
+    width: 50%;
+    padding: rem(40);
+    background-color: $white;
+    box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    .buttons {
+      margin-top: rem(20);
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .tabbed-content-section {
+    &__tabs {
+      display: none;
+    }
+
+    &__content {
+      padding: 0;
+  
+      section {
+        display: flex;
+      }
+    }
+  
+    &__image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-bottom: 60%;
+    }
+  
+    &__text {
+      width: 100%;
+      padding: rem(40) rem(40) rem(10);
+      box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0);
+    }
+  }
+}

@@ -1,0 +1,301 @@
+/*------------------------------------------------------------------------------
+  Forms
+------------------------------------------------------------------------------*/
+// Element Styles
+label {
+  position: relative;
+  font: 400 rem(15)/1.47 $sans;
+  color: #000;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"], input[type="password"],
+textarea,
+select {
+  width: 100% !important;
+  padding: rem(10) rem(5) !important;
+  border-radius: 0 !important;
+  border: none;
+  border-bottom: rem(1) solid #000;
+  background-color: transparent;
+  font: 400 rem(15)/1.47 $sans;
+  color: #000;
+  transition: all .4s ease;
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $scooter !important;
+  }
+}
+
+textarea {
+  border: rem(1) solid #000 !important;
+}
+
+select {
+  -webkit-appearance: none;
+
+  // Hides IE Dropdown default arrow
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.acf-field-select {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: rem(20);
+    right: rem(20);
+    content: url('../img/triangle.svg');
+    width: rem(8);
+    transform: rotate(-90deg);
+    pointer-events: none;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  height: rem(20) !important;
+  margin-right: 0 0 rem(8) !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+
+  &:after {
+    display: block;
+    position: relative;
+    content: '';
+    top: 0;
+    left: 0;
+    width: rem(20);
+    height: rem(20);
+    border: rem(1) solid #000;
+    background-color: transparent;
+  }
+  &:focus, &:active {
+    outline: none;
+
+    &:after {
+      border-color: $scooter;
+    }
+  }
+}
+
+input[type="checkbox"]:checked:after {
+  background: #fff url('../img/check.svg') center center/80% auto no-repeat;
+}
+
+input[type="radio"] {
+  &:after {
+    border-radius: 50%;
+  }
+
+  &:checked:after {
+    background: #fff url('../img/dot.svg') center center/60% auto no-repeat;
+  }
+}
+
+// Submit Button
+input[type="submit"] {
+  @include button($scooter, transparent, $scooter, $scooter, $white);
+  width: auto !important;
+}
+
+.acf-form-submit {
+  margin-top: rem(30);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: rem(82);
+  height: rem(38);
+  margin: 0 rem(15);
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider:before {
+      transform: translateX(45px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      + .slider {
+        border-color: $teal;
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: rem(1) solid $black;
+    border-radius: rem(18);
+    box-shadow: 0 0 rem(6) $tundora;
+    background-color: $white;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: rem(3);
+      bottom: rem(3);
+      width: rem(30);
+      height: rem(30);
+      border-radius: 50%;
+      background-color: $teal;
+      transition: all .4s ease;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  i {
+    margin-right: rem(20);
+    font-size: rem(32);
+    color: $blue;
+  }
+
+  input[type="text"] {
+    flex: 1 1 auto;
+    width: calc(100% - 177px);
+    height: rem(42);
+    padding: rem(8) rem(30);
+    border: rem(1) solid transparent;
+    border-radius: 0;
+    background-color: $lightGray;
+    font: 400 rem(18)/1 $sans;
+    color: $tundora;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus {
+      border-color: $teal;
+    }
+  }
+
+  button,
+  input[type="submit"] {
+    -webkit-appearance: none;
+    height: rem(42);
+    padding: rem(9) rem(28);
+    border: rem(1) solid transparent;
+    border-radius: 0 !important;
+    background-color: $teal;
+    font: 400 rem(18)/1 $sans;
+    color: $white;
+    transition: all .4s ease;
+    outline: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
+.gform_wrapper {
+  margin: 0 !important;
+
+  form {
+    // Layout Styles
+    .gform_fields {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+    }
+
+    .gfield {
+      flex-basis: 100%;
+      margin: 0 0 rem(10) !important;
+      padding: 0 !important;
+    }
+
+    .half-width {
+      flex-basis: 49%;
+    }
+
+    div.ginput_container_select {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        content: url('../img/triangle.svg');
+        width: rem(8);
+        transform: rotate(-90deg);
+        pointer-events: none;
+      }
+    }
+
+    .gfield_checkbox {
+      label {
+        max-width: unset !important;
+        min-width: rem(170);
+        margin-top: rem(6) !important;
+      }
+    }
+
+    .gfield_required {
+      color: inherit;
+    }
+  }
+}
+
+form.checkout.woocommerce-checkout {
+  h3 {
+    margin-top: rem(40);
+  }
+
+  label {
+    text-transform: capitalize;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .gform_wrapper form .half-width {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: rem(400)) {
+  .search-form {
+    i {
+      margin-right: rem(10);
+    }
+
+    input[type="text"] {
+      padding: rem(8) rem(15);
+    }
+
+    button,
+    input[type="submit"] {
+      padding: rem(9) rem(15);
+    }
+  }
+}

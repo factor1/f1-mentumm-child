@@ -1,0 +1,15 @@
+/*
+ * Welcome from checkout Header
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.dashboard-welcome {
+  @include iPhoneX;
+
+  .container {
+    padding-top: rem(25);
+  }
+}

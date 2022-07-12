@@ -1,0 +1,64 @@
+/**
+ * SCSS Parts
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+// Global
+@import 'global/hero';
+@import 'global/hero-b';
+@import 'global/popular-posts';
+@import 'global/callout';
+@import 'global/text-image-split';
+@import 'global/sixty-text-image-split';
+@import 'global/cta';
+@import 'global/2-col-banner';
+@import 'global/staff';
+@import 'global/text-image-banner';
+@import 'global/four-column-content';
+@import 'global/card-banner';
+@import 'global/tabbed-content-section';
+@import 'global/timeline';
+@import 'global/icon-data';
+@import 'global/logo-slider';
+@import 'global/three-column-content';
+@import 'global/text-split';
+
+// Home
+@import 'home/hero';
+@import 'home/2-col-video-hero';
+@import 'home/3-column-section';
+@import 'home/text-split';
+@import 'home/category-grid';
+@import 'home/5050widesplits';
+@import 'home/2-col-list-modal';
+@import 'home/2-col-call-to-action';
+@import 'home/testimonials';
+@import 'home/plans';
+
+// Index
+// @import 'index/popular-resources';
+@import 'index/post-grid';
+
+// Single
+@import 'single/hero';
+@import 'single/content';
+
+// Dashboard
+@import 'dashboard/welcome';
+@import 'dashboard/grid';
+@import 'dashboard/weekly-message';
+@import 'dashboard/workshops';
+@import 'dashboard/content-tabs';
+@import 'dashboard/content';
+
+// Landing 2021
+@import 'template/landing/hero';
+@import 'template/landing/banner';
+@import 'template/landing/social-links';
+@import 'template/landing/footer';
+
+//Single staff
+@import 'single-staff/staff-profile';

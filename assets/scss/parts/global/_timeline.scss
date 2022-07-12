@@ -1,0 +1,282 @@
+/*
+ * Timeline
+ *
+ * Template part used on the various templates/views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.6.0
+ */
+
+.timeline-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(40) 0 rem(50);
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: rem(40);
+    padding:  0 0 rem(20) ;
+
+    // Before and after creates the gray arrow
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: rem(6);
+      height: 100%;
+      margin: auto;
+      background-color: rgba($doveGray, 0.5);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0;
+      border-width: rem(12);
+      border-style: solid;
+      border-color: rgba($doveGray, 0.5) transparent transparent transparent;
+    }
+
+    &__block {
+      position: relative;
+      width: 50%;
+      padding: rem(10) rem(20);
+      clear: both;
+
+      &:first-of-type .timeline__content {
+        display: block;
+      }
+
+      // Odds on the left
+      &:nth-of-type(odd) {
+        .timeline__headline {
+          text-align: right;
+
+          &:before {
+            right: rem(-26);
+          }
+
+          &:after {
+            right: 0;
+          }
+
+          &.open {
+            padding-right: calc(100% - 250px);
+          }
+        }
+
+        .timeline__content {
+          float: right;
+        }
+      }
+
+      // Evens on the right
+      &:nth-of-type(even) {
+        float: right;
+
+        .timeline__headline {
+          &:before {
+            left: rem(-26);
+          }
+
+          &:after {
+            left: 0;
+          }
+
+          &.open {
+            padding-left: calc(100% - 250px);
+          }
+        }
+
+        .item-title {
+          padding: rem(17) rem(40) rem(18) rem(20);
+          float: left;
+          .timeline-icon {
+            top: rem(-10);
+            right: rem(-60);
+            left: auto;
+          }
+        }
+      }
+      
+      .item-title {
+        position: relative;
+        background: $blue;
+        min-width: rem(230);
+        padding: rem(17) rem(20) rem(18) rem(40);
+        color: #fff;
+        display: block;
+        width: fit-content;
+        float: right;
+
+        .timeline-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: rem(-10);
+          left: rem(-60);
+          width: rem(80);
+          height: rem(80);
+          padding: rem(15);
+          border-radius: rem(50);
+          background-color: $teal;
+          color: $white;
+          overflow: hidden;
+        }
+      }
+
+    }
+
+    &__headline {
+      position: relative;
+      transition: all .4s ease;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: rem(20);
+        width: rem(12);
+        height: rem(12);
+        border-radius: 50%;
+        background-color: $blue;
+        animation: ripples 2s 4s infinite;
+        transition: background-color .4s ease;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: rem(25);
+        height: rem(3);
+        width: 0;
+        background-color: $blue;
+        transition: width .4s ease;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+
+      &.open {
+        &:before {
+          background-color: $blue;
+        }
+
+        &:after {
+          width: calc(100% - 265px);
+        }
+      }
+
+      // Ripples
+      @keyframes ripples {
+        0% {
+          box-shadow: 0 0 0 0 rgba($blue, .5);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0.5em rgba($blue, 0);
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+      padding: rem(30) rem(20);
+      clear: both;
+    }
+  }
+
+  // Fix float issues
+  .clear {
+    display: block;
+    overflow: auto;
+    clear: both;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: rem(500)) {
+  .timeline-section .timeline {
+    &:before {
+      right: auto;
+      margin: unset;
+    }
+
+    &:after {
+      left: -9px;
+      right: auto;
+      margin: unset;
+    }
+
+    &__block {
+      width: 100%;
+
+      .item-title {
+        margin: 0 0 rem(25);
+      }
+
+      // Odds and Even
+      &:nth-of-type(odd) {
+        .timeline__headline {
+          text-align: left;
+
+          &:before {
+            left: rem(-23);
+            right: unset;
+          }
+
+          &:after {
+            left: 0;
+            right: unset;
+          }
+
+          &.open {
+            padding-left: calc(100% - 265px);
+          }
+        }
+
+        .timeline__content {
+          float: none;
+        }
+
+        .item-title {
+          float: left;
+          padding: rem(17) rem(40) rem(18) rem(20);
+          .timeline-icon {
+            right: rem(-60);
+            left: auto;
+          }
+        }
+      }
+      // Evens
+      &:nth-of-type(even) {
+        float: none;
+        .timeline__headline {
+          &:before {
+            left: rem(-23);
+            right: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .timeline-section .timeline__headline:before {
+    top: rem(20);
+  }
+
+  .timeline-section .timeline__headline.open:after {
+    top: 25px;
+  }
+}

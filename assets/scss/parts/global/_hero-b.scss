@@ -1,0 +1,36 @@
+/**
+ * Hero B (with background) (Global)
+ *
+ * Template part used on index.php and other views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.2.0
+ */
+
+.hero-b {
+  @include iPhoneX;
+  min-height: rem(500);
+
+  .container {
+    padding: rem(200) 0;
+  }
+
+  &.small-hero {
+    min-height: rem(350);
+    .container {
+      padding: rem(150) 0 rem(120);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .hero-b {
+    min-height: rem(300);
+
+    .container {  
+      padding: rem(200) 0 rem(50);
+    }
+  }
+}

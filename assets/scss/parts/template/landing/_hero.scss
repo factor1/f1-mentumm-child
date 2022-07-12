@@ -1,0 +1,41 @@
+/*
+ * Hero Template 2021
+ *
+ * Template part used on the landing 2021 template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.landing-hero {
+  @include iPhoneX;
+  min-height: 105vh;
+  background-color: $landingGray !important;
+
+  .container {
+    padding: 15vh 0;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: rem(550);
+    margin: 0 auto;
+
+    .social-link {
+      margin: 0;
+      flex-basis: 25%;
+    }
+    
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  // .landing-hero__social-links .social-link {
+    
+  // }
+}

@@ -1,0 +1,63 @@
+/*----------------------------------------------------------------------------
+  Buttons
+----------------------------------------------------------------------------*/
+.button {
+  &--scooter {
+    @include button($scooter, transparent, $scooter, $scooter, $white);
+  }
+
+  &--teal {
+    @include button($teal, $teal, $white, transparent, $teal);
+
+    &:focus,
+    &:hover {
+        border-color: $teal;
+    }
+  }
+
+  &--teal-block {
+    @include button($teal, $teal, $white, transparent, $teal);
+    border-radius: 0;
+    padding: rem(12) rem(50);
+    font-family: $serif;
+    text-transform: unset;
+
+    &:focus,
+    &:hover {
+      border-color: $teal;
+    }
+  }
+
+  &--blue {
+    @include button($blue, $blue, $white, transparent, $blue);
+    padding: rem(12) rem(50);
+    font-weight: 400;
+  }
+
+  &--ghost {
+    @include button($white, transparent, $white, $white, $scooter);
+  }
+
+  &--ghost-blue {
+    @include button($blue, transparent, $blue, $blue, $white);
+  }
+
+  &--landing {
+    @include button($blue-dark, $blue-dark, $white, $white, $blue-dark);
+    border-radius: 0;
+    font: 400 rem(24)/1.3 $fjalla;
+    padding: rem(15) rem(20);
+    width: 100%;
+    max-width: rem(370);
+  }
+  
+  &--landing-ghost {
+    @include button($white, transparent, $white, $white, $blue-dark);
+    border-radius: 0;
+    font: 400 rem(24)/1 $fjalla;
+    padding: rem(15) rem(20);
+    width: 100%;
+    max-width: rem(370);
+  }
+  
+}

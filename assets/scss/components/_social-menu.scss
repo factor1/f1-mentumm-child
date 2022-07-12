@@ -1,0 +1,93 @@
+/*----------------------------------------------------------------------------
+  WordPress Social Menu
+  - make sure to include FontAwesome for this to work!
+----------------------------------------------------------------------------*/
+.menu-social {
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    list-style: none;
+    li{
+      display: inline-block;
+      position: relative;
+      padding: 0 .625rem;
+      a{
+        display: inline-block;
+        text-align: center;
+        &:before{
+          display: none;
+          font-family: 'Font Awesome 5 Brands';
+          color: blue;
+        }
+        .svg-inline--fa {
+          font-size: rem(30);
+        }
+        &:hover {
+          color: purple;
+        }
+      } // end anchor
+      // Adding the icons
+      a[href*="facebook.com"]::before {
+        content: '\f09a';
+      }
+
+      a[href*="twitter.com"]::before {
+        content: '\f099';
+      }
+
+      a[href*="dribbble.com"]::before {
+        content: '\f17d';
+      }
+
+      a[href*="plus.google.com"]::before {
+        content: '\f0d5';
+      }
+
+      a[href*="pinterest.com"]::before {
+        content: '\f0d2';
+      }
+
+      a[href*="github.com"]::before {
+        content: '\f09b';
+      }
+
+      a[href*="tumblr.com"]::before {
+        content: '\f173';
+      }
+
+      a[href*="youtube.com"]::before {
+        content: '\f167';
+      }
+
+      a[href*="flickr.com"]::before {
+        content: '\f16e';
+      }
+
+      a[href*="vimeo.com"]::before {
+        content: '\f194';
+      }
+
+      a[href*="instagram.com"]::before {
+        content: '\f16d';
+      }
+
+      a[href*="linkedin.com"]::before {
+        content: '\f0e1';
+      }
+
+      a[href*="yelp.com"]::before {
+        content: '\f1e9';
+      }
+
+      a[href*="mailto:"]::before {
+        content: '\f003';
+      }
+    } // end li
+  } // end ul
+} // end .menu-social
+
+// Hide the default Screen Reader text
+.screen-reader-text {
+  display: none;
+}

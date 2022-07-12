@@ -1,0 +1,53 @@
+/**
+ * Content (Single)
+ *
+ * Template part used on single.php
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.staff-profile {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 90%;
+    border-radius: 50%;
+  }
+
+  &__social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: rem(10) 0 0;
+  }
+
+  .button {
+    margin-right: rem(10);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .staff-profile .button {
+    width: 80%;
+    margin: rem(10) 10%;
+  }
+
+  .staff-profile__social-media {
+    padding: rem(30) 0;
+  }
+}

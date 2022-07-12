@@ -1,0 +1,87 @@
+/*
+ * Text/Image Split Full Width (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+ .home-image-text-split-full-width {
+    @include iPhoneX;
+
+    .full-width {
+      display: flex;
+      align-items: stretch;
+
+      .col-6.sm-col-11 {
+        display: flex;
+        align-items: center;
+        &.left-side{
+          justify-content: flex-end;
+          .realign.row{
+            justify-content: flex-start;
+          }
+        }
+        &.right-side {
+          justify-content: flex-start;
+          .realign.row {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+
+    }
+
+    .right-side {
+        h2 {
+            font: 400 rem(45)/1.11 $cursive;
+            margin-bottom: 45px;
+        }
+        p {
+            font: 400 rem(30)/1.17 $open;
+            letter-spacing: 0px;
+            color: $black;
+        }
+
+    }
+    .left-side {
+        h2 {
+            font: 700 rem(45)/1.13 $cursive;
+            margin-bottom: 63px;
+            text-transform: capitalize;
+        }
+    }
+
+    h2 {
+      font: font: 700 rem(45)/1.13 $cursive;
+      letter-spacing: 0px;
+      color: $black;
+        .right-side{
+            color: red;
+        }
+
+    }
+
+    p {
+      text-align: left;
+      font: 400 rem(30)/1.17 $sans;
+      letter-spacing: 0px;
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  // Media Queries
+  @media screen and (max-width: $small-breakpoint) {
+    .home-text-image-split-full-width {
+      h2 {
+        font-size: rem(32);
+      }
+
+      p {
+        font-size: rem(24);
+      }
+    }
+  }

@@ -1,0 +1,44 @@
+/**
+ * The 404 Not Found template.
+ *
+ * Used when WordPress encounters an unknown URL.
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.error-404 {
+  @include iPhoneX;
+  min-height: calc(100vh - 79px);
+
+  .container {
+    padding: rem(160) 0;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: rem(64);
+    color: $white;
+    text-transform: none;
+  }
+
+  .button {
+    margin-top: rem(50);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .error-404 {
+    min-height: calc(100vh - 159px);
+
+    .container {
+      padding: rem(160) 0 rem(100);
+    }
+
+    h1 {
+      font-size: rem(36);
+    }
+  }
+}

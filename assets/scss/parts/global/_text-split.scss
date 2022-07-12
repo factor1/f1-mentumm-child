@@ -1,0 +1,18 @@
+/**
+ * Text split
+ *
+ * Template part used on the various templates/views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.2.0
+ */
+
+.text-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(25) 0;
+  }
+
+}

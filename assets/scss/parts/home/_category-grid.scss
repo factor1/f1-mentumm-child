@@ -1,0 +1,84 @@
+/*
+ * Category Grid (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.category-grid {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0 rem(30);
+  }
+
+  h2 {
+    margin: 0 0 rem(60);
+    font: 700 rem(50)/1.12 $sans;
+    color: $teal;
+  }
+
+  .block-grid-5 {
+    justify-content: center;
+  }
+
+  .col {
+    margin-bottom: rem(45);
+
+    > div {
+      margin-bottom: rem(20);
+
+      img {
+        height: rem(60);
+      }
+    }
+
+    h4 {
+      font-family: $sans;
+      color: $blue;
+      text-transform: uppercase;
+    }
+  }
+
+
+  h3 {
+    margin: 0 0 rem(10);
+    font-weight: 400;
+    font-family: $sans;
+    color: $teal;
+    text-transform: none;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .category-grid {
+    .col {
+      min-width: rem(145);
+      margin-bottom: rem(30);
+
+      > div {
+        margin-bottom: rem(10);
+
+        img {
+          height: rem(50);
+        }
+      }
+
+      h4 {
+        font-size: rem(18);
+      }
+    }
+
+    h2 {
+      font-size: rem(32);
+    }
+
+    h3 {
+      font-size: rem(28);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+/*
+ * Text/Image Split Full Width (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+section.home5050 {
+  @include iPhoneX;
+
+  .full-width .row {
+    max-width: 110rem !important;
+    margin-bottom: 50px;
+	}
+  
+  .copy-side {
+	  display: block;
+	  margin: auto auto;
+	  max-width: 600px;
+	  
+	  h2 {
+	    //font-size: rem(42);
+	    text-transform: capitalize;
+	  }
+	
+	  p {
+	    //font-size: rem(20);
+	  }
+  }
+  
+  .image-side {
+	  min-height: 200px;
+	  background-repeat: no-repeat;
+	  background-position: top center;
+	  background-size: cover;
+	  padding: 35% 0 0;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  section.home5050 {
+	  
+	  .full-width .row {
+	    margin-bottom: 20px;
+		}
+	
+	  .copy-side {
+	    h2 {
+	      font-size: rem(27);
+	      margin-top: rem(20);
+	    }
+	
+	    p {
+	      font-size: rem(18);
+	    }
+	   }
+	   
+	   .image-side {
+		   min-height: 270px;
+		   background-position: center center;
+	   }
+  }
+}

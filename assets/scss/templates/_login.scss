@@ -1,0 +1,17 @@
+/*
+ * Template Name: Login
+ *
+ * Template used on the login page
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.login-section {
+  display: flex;
+  min-height: calc( 100vh - 79px);
+  align-items: center;
+  justify-content: center;
+  padding: rem(100) rem(20) rem(50);
+}

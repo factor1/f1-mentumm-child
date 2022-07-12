@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------------------
+  Pagination
+------------------------------------------------------------------------------*/
+.pagination {
+  margin-top: rem(70);
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-numbers {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(42);
+    height: rem(42);
+    margin: rem(10);
+    border: rem(1) solid $lightGray;
+    font: 400 rem(18)/1 $sans;
+    color: $tundora;
+    text-decoration: none;
+  }
+
+  .prev,
+  .next {
+    display: inline-block;
+    width: auto;
+    border: none;
+    height: auto;
+    background-color: transparent !important;
+
+    &:hover {
+      color: $teal !important;
+    }
+  }
+
+  span.page-numbers,
+  a.page-numbers:hover {
+    border-color: $teal;
+    background-color: $teal;
+    color: $white;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .pagination {
+    margin-top: rem(40);
+  }
+}

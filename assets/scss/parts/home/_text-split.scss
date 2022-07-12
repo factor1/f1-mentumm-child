@@ -1,0 +1,52 @@
+/*
+ * Text Split (home)
+ *
+ * Template part used on the home template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.text-split {
+  @include iPhoneX;
+  background-color: $blue;
+
+  .container {
+    padding: rem(60) 0;
+  }
+
+  h2 {
+    margin: 0;
+    font: 700 rem(60)/1.12 $sans;
+  }
+
+  p {
+    font-size: rem(30);
+    line-height: 1.17;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li {
+    color: $white;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .text-split h2 {
+    font-size: rem(50);
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .text-split {
+    h2 {
+      margin-bottom: rem(30);
+      font-size: rem(32);
+    }
+
+    p {
+      font-size: rem(22);
+    }
+  }
+}

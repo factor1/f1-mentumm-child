@@ -1,0 +1,79 @@
+/**
+ * Hero (Global)
+ *
+ * Template part used on index.php and other views
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 0.1.0
+ */
+
+.hero--global {
+  @include iPhoneX;
+  background-color: $blue;
+
+  .container {
+    padding: rem(142) 0 rem(60);
+  }
+
+  h1 {
+    font-size: rem(80);
+    color: $white;
+  }
+
+  img {
+    height: rem(95);
+    margin-right: rem(20);
+    vertical-align: middle;
+  }
+
+  .search-form {
+    max-width: rem(900);
+    margin: 0 auto;
+
+    i {
+      color: $white;
+    }
+
+    input[type="text"] {
+      background-color: rgba($lightGray, 0.57);
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
+
+      &:active,
+      &:focus {
+        border-color: $white;
+      }
+    }
+
+    button,
+    input[type="submit"] {
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $scooter;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .hero--global {
+    .container {
+      padding-top: rem(129);
+    }
+
+    h1 {
+      font-size: rem(42);
+    }
+
+    img {
+      height: rem(50);
+      margin-right: 0;
+    }
+  }
+}

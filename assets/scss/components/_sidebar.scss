@@ -1,0 +1,78 @@
+/**
+ * Sidebar
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.5.0
+ */
+
+.sidebar--lesson {
+  padding: rem(5) rem(15) rem(5) rem(20);
+  background-color: $lightGray;
+
+  div {
+    padding-left: rem(10);
+  }
+
+  ul {
+    margin: 0;
+    padding-left: rem(20);
+    list-style-type: none;
+
+    li {
+      position: relative;
+    }
+
+    li.read {
+      &::before {
+        position: absolute;
+        top: rem(15);
+        left: rem(-30);
+        content: '\f00c';
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(25);
+        height: rem(25);
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 400;
+        border-radius: rem(5);
+        background-color: rgba($doveGray, 0.15);
+        color: $blue;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      padding: rem(15) 0;
+      text-decoration: none;
+
+      &.active {
+        color: $blue;
+      }
+    }
+
+    ul {
+      display: none;
+      margin: rem(5);
+      padding-left: rem(40);
+      border-left: rem(1) solid $blue-dark;
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .sidebar--lesson > ul {
+    display: none;
+  }
+}

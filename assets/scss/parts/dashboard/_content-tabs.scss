@@ -1,0 +1,50 @@
+/*
+ * Content Tabs
+ *
+ * Template part used on the dashboard template
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ * @since 1.3.0
+ */
+
+.dashboard-tabs {
+  position: relative;
+  left: rem(-20);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: calc(100% + 40px);
+  margin-bottom: rem(20);
+
+  button {
+    flex: 0 1 50%;
+    padding: rem(10);
+    border: none;
+    background: $lightGray;
+    font: 700 rem(20)/1.23 $serif;
+    color: $teal;
+    text-transform: uppercase;
+    appearance: none;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &.active,
+    &:focus,
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    // Angles
+    &:first-of-type {
+      clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%); // ios safari fix
+    }
+
+    &:last-of-type {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%); // ios safari fix
+    }
+  }
+}

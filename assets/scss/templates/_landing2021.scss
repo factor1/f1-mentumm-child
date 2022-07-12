@@ -1,0 +1,15 @@
+/*
+ * Template used on the landing 2021 page
+ *
+ * @package F1 Growth10
+ * @author Factor1 Studios
+ */
+
+.landing-2021 {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0;
+  }
+
+}
