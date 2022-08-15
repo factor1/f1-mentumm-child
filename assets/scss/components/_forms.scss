@@ -276,6 +276,14 @@ form.checkout.woocommerce-checkout {
   }
 }
 
+.ui-datepicker-month,
+.ui-datepicker-year {
+  -moz-text-align-last: left !important;
+  text-align-last: left !important;
+  margin-bottom: rem(5) !important;
+  background: whitesmoke !important;
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .gform_wrapper form .half-width {
