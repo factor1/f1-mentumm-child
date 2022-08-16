@@ -3,7 +3,7 @@ export default function renderPlan(plan) {
   const plans = [
     
     { id: 5, product_id: 9844, variations: { month: { id: 9854, cost: '500' }, annual: { id: 5767, cost: '5999' } } },
-    { id: 10, product_id: 9844, variations: { month: { id: 9845, cost: '1,000' }, annual: { id: 5768, cost: '699'9 } } },
+    { id: 10, product_id: 9844, variations: { month: { id: 9845, cost: '1,000' }, annual: { id: 5768, cost: '6999' } } },
     { id: 15, product_id: 9844, variations: { month: { id: 9847, cost: '1,500' }, annual: { id: 5769, cost: '7999' } } },
     { id: 20, product_id: 9844, variations: { month: { id: 9848, cost: '2,000' }, annual: { id: 5770, cost: '8999' } } },
     { id: 25, product_id: 9844, variations: { month: { id: 9849, cost: '2,500' }, annual: { id: 5771, cost: '9999' } } },
