@@ -175,7 +175,7 @@ $(document).ready(function($) {
   });
 
   // hashed part
-  var hash = window.location.hash.substr(1);
+  var hash = window.location.hash.substring(1);
   if (hash != ''){
     renderPlan(parseInt(hash));
   } else {

@@ -1,11 +1,9 @@
 {
   "name": "f1-growth10-child",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "scripts": {
-    "build-scss": "parcel build ./assets/scss/theme.scss --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache",
-    "release-major": "yarn test && node ./util/versionUpdate.js --major && yarn build",
-    "release-minor": "yarn test && node ./util/versionUpdate.js --minor && yarn build",
-    "release-patch": "yarn test && node ./util/versionUpdate.js --patch && yarn build"
+    "build-js": "parcel build ./assets/js/theme.js --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache",
+    "build-scss": "parcel build ./assets/scss/theme.scss --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache"
   },
   "license": "MIT",
   "dependencies": {
